@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 db = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="nithin@23",
+    user="expense_user",
+    password="Nithin@23022003",
     database="expense_db"
 )
 
@@ -32,4 +32,4 @@ def index():
     return render_template("index.html", expenses=data)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
